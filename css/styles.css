@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #333; /* Warna latar belakang abu-abu gelap yang netral */
+    color: #f8f9fa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+h1, h3 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #444; /* Warna latar belakang kartu yang lebih terang dari body */
+    border-radius: 10px;
+    width: 100%; /* Pastikan kartu menempati seluruh lebar */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    background-color: transparent; /* Latar belakang transparan untuk body */
+}
+
+.card-title {
+    font-weight: bold;
+    color: #ffcc00; /* Warna kuning untuk judul */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+}
+
+.card-text {
+    color: #f0e68c; /* Warna kuning muda untuk teks sinopsis */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+}
+
+footer {
+    background-color: #444;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffcc00; /* Warna tombol sosial media */
+}
+
+footer a:hover {
+    color: #f8f9fa; /* Warna hover untuk tombol sosial media */
+}
+
+.map-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-4 {
+        max-width: 50%; /* Mengatur agar hanya ada 2 kolom pada layar yang lebih besar */
+        flex: 0 0 50%;
+    }
+}
